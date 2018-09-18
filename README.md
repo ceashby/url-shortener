@@ -47,7 +47,7 @@ fab stop_server
 
 ## How it works
 
-###Terminology
+### Terminology
 - link - A pointer to a website which has a long_url, short_url and id
 - long_url - The original url we need to store (String)
 - id - The unique identifier of the link in our database (Integer)
