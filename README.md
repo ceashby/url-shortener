@@ -1,6 +1,6 @@
 ## Setup
 
-Download the folder, open the terminal and cd into that directory
+Download the folder, open the terminal and cd into that directory:
 ```
 cd /path/to/project
 ```
@@ -25,22 +25,22 @@ Enter virtual environment:
 source env/bin/activate 
 ```
 
-Install requirements
+Install requirements:
 ```
 pip install -r requirements.txt
 ```
 
-Run tests
+Run tests:
 ```
 fab test
 ```
 
-Run the development server for testing
+Run the development server for testing:
 ```
 fab dev_server
 ```
 
-When done, stop the redis server
+When done, stop the redis server:
 ```
 fab stop_server
 ```
