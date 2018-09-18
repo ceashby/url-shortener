@@ -44,7 +44,7 @@ def redirect_url(short_url):
     if long_url:
         return redirect(long_url, code=302)
     else:
-        return error_json_response("Url '{}' not found.".format(short_url), 404)
+        return error_json_response("URL '{}' not found".format(short_url), 404)
 
 
 @app.errorhandler(Exception)

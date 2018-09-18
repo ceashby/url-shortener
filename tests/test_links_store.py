@@ -30,15 +30,15 @@ class LinksStoreTests(unittest.TestCase):
 
     def test_returns_error_if_no_url(self):
         error_message, _ = self.links_store.shorten_url('')
-        self.assertEqual(error_message, 'Invalid url supplied')
+        self.assertEqual(error_message, 'Invalid URL supplied')
 
     def test_returns_error_if_invalid_url(self):
         error_message, _ = self.links_store.shorten_url('not a url')
-        self.assertEqual(error_message, 'Invalid url supplied')
+        self.assertEqual(error_message, 'Invalid URL supplied')
 
     def test_returns_error_if_url_too_long(self):
         error_message, _ = self.links_store.shorten_url('a' * 2000)
-        self.assertEqual(error_message, 'Invalid url supplied')
+        self.assertEqual(error_message, 'Invalid URL supplied')
 
     def test_creates_shortened_url(self):
         long_url = "http://example.com"

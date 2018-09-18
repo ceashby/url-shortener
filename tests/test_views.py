@@ -67,4 +67,4 @@ class TestViews(unittest.TestCase):
         self.lengthen_url.return_value = None
         result = self.test_client.get('/123')
         self.assertEqual(404, result.status_code)
-        self.assertEqual({"error": "short url '123' not found"}, json.loads(result.data))
+        self.assertEqual({"error": "URL '123' not found"}, json.loads(result.data))

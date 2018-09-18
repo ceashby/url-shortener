@@ -11,11 +11,6 @@ def dev_server():
 
 
 @task
-def server():
-    start_redis()
-
-
-@task
 def test():
     local('python -m unittest discover')
 
