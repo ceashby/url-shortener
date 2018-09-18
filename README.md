@@ -35,12 +35,12 @@ Run tests
 fab test
 ```
 
-Run the development server for testing.
+Run the development server for testing
 ```
 fab dev_server
 ```
 
-When you're done stop the redis server
+When done, stop the redis server
 ```
 fab stop_server
 ```
@@ -71,9 +71,10 @@ is a large amount of traffic. Instead we have hundreds of separate counters each
 
 ## Example API usage:
 ```
-curl -d '{"url": "http://example.com"}'
-     -X POST http://localhost:5000/shorten_url
-     -H "Content-Type: application/json"
+curl http://localhost:5000/shorten_url \
+    -d '{"url": "http://example.com"}' \
+    -X POST \
+    -H "Content-Type: application/json"
 
 Request:
     POST http://localhost:5000/shorten_url

@@ -20,7 +20,7 @@ class LinksStore:
 
     def shorten_url(self, long_url):
         is_valid = validators.url(long_url)
-        if not is_valid or len(long_url) > self.max_url_length:
+        if not is_valid:
             return 'Invalid URL supplied', None
 
         if len(long_url) > self.max_url_length:

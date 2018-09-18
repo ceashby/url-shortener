@@ -1,4 +1,5 @@
 
+
 class IDsByLongURLStore:
     def __init__(self, redis_db):
         self.redis_db = redis_db
