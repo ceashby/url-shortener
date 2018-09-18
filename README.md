@@ -56,16 +56,16 @@ fab stop_server
 ### Database
 
 The server uses a redis database. Three different types of data are stored in the database:
+
 #### long_urls_by_id
 Each key is a unique integer ID and the value is the corresponding long url. When a request is made to our server with a short url, we decode the short url to get the id and use this id to find the long url.
-
 
 #### ids_by_long_url
 Each key is a long url and the value is the corresponding id. When a request is made to create a new short url, we need
 to check if a short url already exists and if so what its id is. When a new short url is created an entry is added to
 both long_urls_by_id and ids_by_long_url together they work as a two way dictionary
 
-### id_counter
+#### id_counter
 We need to store each url at a unique id. We could use a single counter but this could become a bottleneck when there 
 is a large amount of traffic. Instead we have hundreds of separate counters each allocating a different range of ids. The counter used by an individual request is picked randomly. This setup means the data can easily be partitioned across machines.
 
