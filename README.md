@@ -63,7 +63,7 @@ Each key is a unique integer ID and the value is the corresponding long url. Whe
 #### ids_by_long_url
 Each key is a long url and the value is the corresponding id. When a request is made to create a new short url, we need
 to check if a short url already exists and if so what its id is. When a new short url is created an entry is added to
-both long_urls_by_id and ids_by_long_url together they work as a two way dictionary
+both long_urls_by_id and ids_by_long_url together they work as a two way dictionary.
 
 #### id_counter
 We need to store each url at a unique id. We could use a single counter but this could become a bottleneck when there 
@@ -99,7 +99,7 @@ Response:
 
 ## Scaling
 
-There are two types of process which need to run.
+There are two types of process which need to run:
 
 - HTTP Server
 The flask dev server is not designed for production. In production the code would run on gunicorn servers that manages the creation of request handling processes. We may need multiple servers handling requests in a cluster. To implement this we would put them behind a load balancer. Requests to our service would hit the load balancer and be forwarded to a specific node.  I would containerise the application and deploy it in a kubernetes cluster with an ingress.
