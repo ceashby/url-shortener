@@ -93,7 +93,7 @@ Response:
 ```
 
 
-`http://localhost:8000/abcde` -> 302 Redirect to http://example.com
+`http://localhost:5000/abcde` -> 302 Redirect to http://example.com
 
 
 
